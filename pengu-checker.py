@@ -1,4 +1,5 @@
 from cloudscraper import create_scraper
+import time
 
 scape=create_scraper()
 
@@ -70,6 +71,8 @@ def main():
         if total_balance is not None and unclaimed_balance is not None:
             total_balance_ +=total_balance
             print(f"{wallet} -> Total: {round(total_balance, 4)} | Unclaimed: {round(unclaimed_balance, 4)}")
+
+        time.sleep(0.5)
 
 
     print(f"TOTAL: {total_balance_}")
